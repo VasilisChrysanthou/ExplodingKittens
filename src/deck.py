@@ -1,3 +1,5 @@
+"""Module for the Deck class"""
+
 import random
 
 import numpy as np
