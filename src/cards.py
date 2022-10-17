@@ -1,3 +1,6 @@
+"""Module that consists of all card classes"""
+
+
 class Cards:
     """
     This is the generic class for all Cards, which all other cards will inherit from.
