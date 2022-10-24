@@ -1,7 +1,7 @@
 """ Module for the main game """
 
-from .deck import *
-from .player import *
+from .deck import Deck, Defuse
+from .player import Player
 
 
 class Game:

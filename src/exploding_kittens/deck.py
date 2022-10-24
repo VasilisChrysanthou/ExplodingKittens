@@ -2,8 +2,35 @@
 
 import random
 
-from .constants import *
-from .cards import *
+from .constants import (
+    NUM_OF_DEFUSE_CARDS_IN_BASE_GAME,
+    NUM_OF_ATTACK_CARDS_IN_BASE_GAME,
+    NUM_OF_SHUFFLE_CARDS_IN_BASE_GAME,
+    NUM_OF_SEE_FUTURE_CARDS_IN_BASE_GAME,
+    NUM_OF_NOPE_CARDS_IN_BASE_GAME,
+    NUM_OF_SKIP_CARDS_IN_BASE_GAME,
+    NUM_OF_FAVOR_CARDS_IN_BASE_GAME,
+    NUM_OF_TACOCAT_CARDS_IN_BASE_GAME,
+    NUM_OF_CATERMELON_CARDS_IN_BASE_GAME,
+    NUM_OF_HAIRY_POTATO_CAT_CARDS_IN_BASE_GAME,
+    NUM_OF_BEARD_CAT_CARDS_IN_BASE_GAME,
+    NUM_OF_RAINBOW_RALPHING_CAT_CARDS_IN_BASE_GAME,
+)
+from .cards import (
+    ExplodingKitten,
+    Defuse,
+    Catermelon,
+    HairyPotatoCat,
+    RainbowCat,
+    BeardCat,
+    Tacocat,
+    Favor,
+    Skip,
+    Attack,
+    SeeTheFuture,
+    Nope,
+    Shuffle,
+)
 
 
 class Deck:
