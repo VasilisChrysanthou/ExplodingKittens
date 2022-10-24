@@ -18,7 +18,7 @@ class Game:
         for pl in players:
             self.players.append(Player(pl))
             self.players[-1].deal_hand(
-                [self.deck.deck.pop(0) for _ in range(5)] + [Defuse()]
+                [self.deck.cards.pop(0) for _ in range(5)] + [Defuse()]
             )
             self.players[-1].hand.sort(key=lambda x: x.id)
         self.deck.add_defuse_and_exploding_to_deck()

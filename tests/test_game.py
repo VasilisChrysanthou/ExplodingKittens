@@ -15,7 +15,7 @@ def test_game_init_default():
     assert testgame.players[1].name == "Player 2"
     assert len(testgame.players[0].hand) == 6
     assert len(testgame.players[1].hand) == 6
-    assert len(testgame.deck.deck) == 41
+    assert len(testgame.deck.cards) == 41
 
 
 def test_game_init_three_players():
@@ -30,4 +30,4 @@ def test_game_init_three_players():
     assert len(testgame.players[0].hand) == 6
     assert len(testgame.players[1].hand) == 6
     assert len(testgame.players[2].hand) == 6
-    assert len(testgame.deck.deck) == 36
+    assert len(testgame.deck.cards) == 36

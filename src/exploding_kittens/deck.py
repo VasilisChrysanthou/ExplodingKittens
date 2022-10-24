@@ -25,8 +25,8 @@ class Deck:
         Initialises the deck based on the card set specified apart from
         Defuse cards and Exploding Kittens
         """
-        self.deck = []
-        self.deck += (
+        self.cards = []
+        self.cards += (
             NUM_OF_ATTACK_CARDS_IN_BASE_GAME * [Attack()]
             + NUM_OF_SHUFFLE_CARDS_IN_BASE_GAME * [Shuffle()]
             + NUM_OF_SEE_FUTURE_CARDS_IN_BASE_GAME * [SeeTheFuture()]
@@ -46,7 +46,7 @@ class Deck:
         Adds the Defuse cards and Exploding Kittens cards in the deck after giving
         each player their hand
         """
-        self.deck += (NUM_OF_DEFUSE_CARDS_IN_BASE_GAME - self.num_of_players) * [
+        self.cards += (NUM_OF_DEFUSE_CARDS_IN_BASE_GAME - self.num_of_players) * [
             Defuse()
         ] + (self.num_of_players - 1) * [ExplodingKitten()]
         self.shuffle_deck()
@@ -55,4 +55,4 @@ class Deck:
         """
         Shuffles the deck
         """
-        random.shuffle(self.deck)
+        random.shuffle(self.cards)
