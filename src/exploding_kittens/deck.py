@@ -2,8 +2,8 @@
 
 import random
 
-from constants import *
-from cards import *
+from .constants import *
+from .cards import *
 
 
 class Deck:
