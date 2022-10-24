@@ -1,3 +1,5 @@
+"""Module that consists of all constants"""
+
 NUM_OF_DEFUSE_CARDS_IN_BASE_GAME = 6
 NUM_OF_ATTACK_CARDS_IN_BASE_GAME = 4
 NUM_OF_SHUFFLE_CARDS_IN_BASE_GAME = 4

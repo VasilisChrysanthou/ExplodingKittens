@@ -1,0 +1,6 @@
+name: ExplodingKittEnv
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+prefix: C:\Users\chrys\anaconda3\envs\ExplodingKittEnv
