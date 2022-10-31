@@ -38,7 +38,7 @@ def test_explodingkitten():
     testcard = ExplodingKitten()
     assert testcard.discarded is False
     assert testcard.id == 0
-    assert type(testcard) == ExplodingKitten
+    assert isinstance(testcard, ExplodingKitten)
     assert str(testcard) == "Exploding Kitten"
 
 
@@ -50,7 +50,7 @@ def test_defuse():
     testcard = Defuse()
     assert testcard.discarded is False
     assert testcard.id == 1
-    assert type(testcard) == Defuse
+    assert isinstance(testcard, Defuse)
     assert str(testcard) == "Defuse"
 
 
@@ -61,7 +61,7 @@ def test_catermelon():
     testcard = Catermelon()
     assert testcard.discarded is False
     assert testcard.id == 2
-    assert type(testcard) == Catermelon
+    assert isinstance(testcard, Catermelon)
     assert str(testcard) == "Catermelon"
 
 
@@ -72,7 +72,7 @@ def test_hairypotatocat():
     testcard = HairyPotatoCat()
     assert testcard.discarded is False
     assert testcard.id == 3
-    assert type(testcard) == HairyPotatoCat
+    assert isinstance(testcard, HairyPotatoCat)
     assert str(testcard) == "Hairy Potato Cat"
 
 
@@ -83,7 +83,7 @@ def test_rainbowcat():
     testcard = RainbowCat()
     assert testcard.discarded is False
     assert testcard.id == 4
-    assert type(testcard) == RainbowCat
+    assert isinstance(testcard, RainbowCat)
     assert str(testcard) == "Rainbow Cat"
 
 
@@ -94,7 +94,7 @@ def test_beardcat():
     testcard = BeardCat()
     assert testcard.discarded is False
     assert testcard.id == 5
-    assert type(testcard) == BeardCat
+    assert isinstance(testcard, BeardCat)
     assert str(testcard) == "Beard Cat"
 
 
@@ -105,7 +105,7 @@ def test_tacocat():
     testcard = Tacocat()
     assert testcard.discarded is False
     assert testcard.id == 6
-    assert type(testcard) == Tacocat
+    assert isinstance(testcard, Tacocat)
     assert str(testcard) == "Tacocat"
     assert testcard.flavortext == "I'm a Palindrome"
 
@@ -117,7 +117,7 @@ def test_favor():
     testcard = Favor()
     assert testcard.discarded is False
     assert testcard.id == 7
-    assert type(testcard) == Favor
+    assert isinstance(testcard, Favor)
     assert str(testcard) == "Favor"
 
 
@@ -128,7 +128,7 @@ def test_skip():
     testcard = Skip()
     assert testcard.discarded is False
     assert testcard.id == 8
-    assert type(testcard) == Skip
+    assert isinstance(testcard, Skip)
     assert str(testcard) == "Skip"
 
 
@@ -139,7 +139,7 @@ def test_attack():
     testcard = Attack()
     assert testcard.discarded is False
     assert testcard.id == 9
-    assert type(testcard) == Attack
+    assert isinstance(testcard, Attack)
     assert str(testcard) == "Attack"
 
 
@@ -150,7 +150,7 @@ def test_seethefuture():
     testcard = SeeTheFuture()
     assert testcard.discarded is False
     assert testcard.id == 10
-    assert type(testcard) == SeeTheFuture
+    assert isinstance(testcard, SeeTheFuture)
     assert str(testcard) == "See The Future"
 
 
@@ -161,7 +161,7 @@ def test_nope():
     testcard = Nope()
     assert testcard.discarded is False
     assert testcard.id == 11
-    assert type(testcard) == Nope
+    assert isinstance(testcard, Nope)
     assert str(testcard) == "Nope"
 
 
@@ -172,6 +172,5 @@ def test_shuffle():
     testcard = Shuffle()
     assert testcard.discarded is False
     assert testcard.id == 12
-    assert type(testcard) == Shuffle
+    assert isinstance(testcard, Shuffle)
     assert str(testcard) == "Shuffle"
-

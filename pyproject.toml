@@ -5,8 +5,15 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "exploding_kittens"
 authors = [{name = "Vasilis Chrysanthou & Michalis Panayides"}]
-home-page = "https://github.com/VasilisChrysanthou/ExplodingKittens"
+requires-python = ">=3.8"
 readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
+
+[project.urls]
+homepage = "https://github.com/vasilischrysanthou/explodingkittens"
+
+[tool.pylint.messages_control]
+max-line-length = 88
+disable = ["invalid-name", "too-few-public-methods", "unnecessary-pass"]
