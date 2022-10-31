@@ -13,9 +13,9 @@ def test_deck_init():
     testdeck = Deck(num_of_players=2)
 
     assert testdeck.num_of_players == 2
-    assert testdeck.expansion_1 == False
-    assert testdeck.expansion_2 == False
-    assert testdeck.expansion_3 == False
+    assert testdeck.expansion_1 is False
+    assert testdeck.expansion_2 is False
+    assert testdeck.expansion_3 is False
     assert type(testdeck.cards) == list
     assert len(testdeck.cards) == 46
 
