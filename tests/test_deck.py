@@ -16,7 +16,7 @@ def test_deck_init():
     assert testdeck.expansion_1 is False
     assert testdeck.expansion_2 is False
     assert testdeck.expansion_3 is False
-    assert type(testdeck.cards) == list
+    assert isinstance(testdeck.cards, list)
     assert len(testdeck.cards) == 46
 
 

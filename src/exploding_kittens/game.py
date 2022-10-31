@@ -12,7 +12,7 @@ class Game:
     Exploding Kittens are shuffled into the deck.
     """
 
-    def __init__(self, players=["Player 1", "Player 2"]):
+    def __init__(self, players=("Player 1", "Player 2")):
         self.deck = Deck(num_of_players=len(players))
         self.players = []
         for pl in players:

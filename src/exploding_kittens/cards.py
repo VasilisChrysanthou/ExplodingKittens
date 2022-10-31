@@ -11,10 +11,17 @@ class Cards:
         self.getid()
 
     def getid(self):
-        pass
+        """
+        Gets the id of the card.
+        """
+        self.id = None
 
 
 class ExplodingKitten(Cards):
+    """
+    This is the class for the Exploding Kitten card.
+    """
+
     def getid(self):
         self.id = 0
 
@@ -23,6 +30,10 @@ class ExplodingKitten(Cards):
 
 
 class Defuse(Cards):
+    """
+    Defuse card class.
+    """
+
     def getid(self):
         self.id = 1
 
@@ -31,6 +42,10 @@ class Defuse(Cards):
 
 
 class Catermelon(Cards):
+    """
+    Catermelon card class.
+    """
+
     def getid(self):
         self.id = 2
 
@@ -39,6 +54,10 @@ class Catermelon(Cards):
 
 
 class HairyPotatoCat(Cards):
+    """
+    Hairy potato cat card class.
+    """
+
     def getid(self):
         self.id = 3
 
@@ -47,6 +66,10 @@ class HairyPotatoCat(Cards):
 
 
 class RainbowCat(Cards):
+    """
+    Rainbow cat card class.
+    """
+
     def getid(self):
         self.id = 4
 
@@ -55,6 +78,10 @@ class RainbowCat(Cards):
 
 
 class BeardCat(Cards):
+    """
+    Beard cat card class.
+    """
+
     def getid(self):
         self.id = 5
 
@@ -63,6 +90,10 @@ class BeardCat(Cards):
 
 
 class Tacocat(Cards):
+    """
+    Tacocat card class.
+    """
+
     def getid(self):
         self.flavortext = "I'm a Palindrome"
         self.id = 6
@@ -72,6 +103,10 @@ class Tacocat(Cards):
 
 
 class Favor(Cards):
+    """
+    Favor card class.
+    """
+
     def getid(self):
         self.id = 7
 
@@ -80,6 +115,10 @@ class Favor(Cards):
 
 
 class Skip(Cards):
+    """
+    Skip card class.
+    """
+
     def getid(self):
         self.id = 8
 
@@ -88,6 +127,10 @@ class Skip(Cards):
 
 
 class Attack(Cards):
+    """
+    Attack card class.
+    """
+
     def getid(self):
         self.id = 9
 
@@ -96,6 +139,10 @@ class Attack(Cards):
 
 
 class SeeTheFuture(Cards):
+    """
+    See the future card class.
+    """
+
     def getid(self):
         self.id = 10
 
@@ -104,6 +151,10 @@ class SeeTheFuture(Cards):
 
 
 class Nope(Cards):
+    """
+    Nope card class.
+    """
+
     def getid(self):
         self.id = 11
 
@@ -112,6 +163,10 @@ class Nope(Cards):
 
 
 class Shuffle(Cards):
+    """
+    Shuffle card class.
+    """
+
     def getid(self):
         self.id = 12
 
