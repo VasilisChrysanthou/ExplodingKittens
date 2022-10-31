@@ -46,22 +46,18 @@ Install a development version of this library by cloning the repository and runn
 ## Usage
 To play a game of Exploding Kittens, simply run the `play.py` script (TBD):
 
-To import the library in a python environment run:
+To import the library in a python environment run (TBD):
 
 ```python
 import exploding_kittens as exp
 
-team_size = 3
-new_battle = pkm.Battle(team_size)
-new_battle.start_battle()
+game = exp.Game(players=('Alice', 'Bob', 'Charlie'))
+game.start_game()
 ```
-Then run the script in your terminal:
-
-    $ python my_script.py
 
 
 ## Tests
-Run all tests developed by first installing and then running `tox` (TBD):
+Run all tests developed by first installing and then running `tox`:
 
     $ python -m pip install tox
     $ python -m tox

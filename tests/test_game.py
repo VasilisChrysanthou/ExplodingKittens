@@ -22,7 +22,7 @@ def test_game_init_three_players():
     """
     Tests the initialisation of the game class with three players.
     """
-    testgame = Game(["Vasos", "Mixas", "Kostas"])
+    testgame = Game(("Vasos", "Mixas", "Kostas"))
     assert len(testgame.players) == 3
     assert testgame.players[0].name == "Vasos"
     assert testgame.players[1].name == "Mixas"
