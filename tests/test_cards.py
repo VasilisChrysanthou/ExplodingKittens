@@ -174,4 +174,3 @@ def test_shuffle():
     assert testcard.id == 12
     assert type(testcard) == Shuffle
     assert str(testcard) == "Shuffle"
-

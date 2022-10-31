@@ -15,4 +15,3 @@ def test_player():
     p1.player_turn()
     assert p1.name == "Vasilis"
     assert p1.hand == 12345
-

@@ -22,4 +22,3 @@ class Game:
             )
             self.players[-1].hand.sort(key=lambda x: x.id)
         self.deck.add_defuse_and_exploding_to_deck()
-
