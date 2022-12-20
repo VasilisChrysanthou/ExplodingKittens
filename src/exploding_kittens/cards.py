@@ -16,6 +16,9 @@ class Cards:
         """
         self.id = None
 
+    def action(self, game):
+        pass
+
 
 class ExplodingKitten(Cards):
     """
@@ -124,6 +127,9 @@ class Skip(Cards):
 
     def __repr__(self):
         return "Skip"
+
+    # def action(self, game):
+    #     game.cards_to_draw = 0
 
 
 class Attack(Cards):
