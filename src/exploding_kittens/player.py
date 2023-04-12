@@ -30,6 +30,7 @@ class Player:
 
         if random.random() < 0.3:
             return self.hand.pop(random.randint(0, len(self.hand) - 1))
+        return None
 
     def draw_to_end_turn(self, game):
         """
@@ -37,7 +38,7 @@ class Player:
         """
         drawn_card = game.deck.cards.pop(0)
         if drawn_card.id != 0:
-            self.hand += drawn_card
+            self.hand += [drawn_card]
         return drawn_card
 
     def explode(self):
