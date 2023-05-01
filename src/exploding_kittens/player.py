@@ -8,6 +8,8 @@ class Player:
     Class for the player object in the game.
     """
 
+    # TODO: Possible idea is to include a strategy argument
+    # where `strategy = interactive, random, logic_1, logic_2`
     def __init__(self, name=None):
         self.name = name
         self.id = None
@@ -25,12 +27,16 @@ class Player:
         """
         #### Pezontas me ton Mixa ####
         # if self.name == "Mixas":
-        #     card_id = input(self.hand)
-        #     return self.hand.pop(int(card_id))
+        card_id = input(self.hand)
+        #print(card_id, type(card_id))
+        if card_id == "":
+            return None
+        return self.hand.pop(int(card_id))
 
-        if random.random() < 0.3:
-            return self.hand.pop(random.randint(0, len(self.hand) - 1))
-        return None
+        #### Pezontas random
+        # if random.random() < 0.3:
+        #     return self.hand.pop(random.randint(0, len(self.hand) - 1))
+        # return None
 
     def draw_to_end_turn(self, game):
         """
