@@ -25,18 +25,19 @@ class Player:
         """
         The player's turn.
         """
+        # TODO: Add check to ensure valid card_id is selected
+
         #### Pezontas me ton Mixa ####
-        # if self.name == "Mixas":
-        card_id = input(self.hand)
-        #print(card_id, type(card_id))
-        if card_id == "":
-            return None
-        return self.hand.pop(int(card_id))
+        if self.name == "Mixas":
+            card_id = input([self.name, self.hand])        
+            if card_id == "":
+                return None
+            return self.hand.pop(int(card_id))
 
         #### Pezontas random
-        # if random.random() < 0.3:
-        #     return self.hand.pop(random.randint(0, len(self.hand) - 1))
-        # return None
+        if random.random() < 0.3:
+            return self.hand.pop(random.randint(0, len(self.hand) - 1))
+        return None
 
     def draw_to_end_turn(self, game):
         """

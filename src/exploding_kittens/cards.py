@@ -23,6 +23,7 @@ class Cards:
 class ExplodingKitten(Cards):
     """
     This is the class for the Exploding Kitten card.
+    TODO: Is there an action that is needed here?
     """
 
     def getid(self):
@@ -35,6 +36,7 @@ class ExplodingKitten(Cards):
 class Defuse(Cards):
     """
     Defuse card class.
+    TODO: Is there an action that is needed here
     """
 
     def getid(self):
@@ -108,6 +110,7 @@ class Tacocat(Cards):
 class Favor(Cards):
     """
     Favor card class.
+    TODO: To be implemented
     """
 
     def getid(self):
@@ -148,7 +151,7 @@ class Attack(Cards):
     def __repr__(self):
         return "Attack"
 
-    def action(self,game):
+    def action(self, game):
         """
         The attack card ends all remaining turns of the player and
         makes the next player play twice. In the event when a player
@@ -186,6 +189,7 @@ class SeeTheFuture(Cards):
 class Nope(Cards):
     """
     Nope card class.
+    TODO: To be implemented
     """
 
     def getid(self):
