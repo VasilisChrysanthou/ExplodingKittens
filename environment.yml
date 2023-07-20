@@ -3,4 +3,10 @@ channels:
   - defaults
 dependencies:
   - python=3.8
+  - black=23.7.0
+  - pytest=7.4.0
+  - coverage=7.2.7
+  - pylint=2.17.4
+  - flake8=6.0.0
+  - mypy=1.4.1
 prefix: C:\Users\chrys\anaconda3\envs\ExplodingKittEnv

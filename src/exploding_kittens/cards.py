@@ -16,10 +16,14 @@ class Cards:
         """
         self.id = None
 
+    def action(self, game):
+        pass
+
 
 class ExplodingKitten(Cards):
     """
     This is the class for the Exploding Kitten card.
+    TODO: Is there an action that is needed here?
     """
 
     def getid(self):
@@ -32,6 +36,7 @@ class ExplodingKitten(Cards):
 class Defuse(Cards):
     """
     Defuse card class.
+    TODO: Is there an action that is needed here
     """
 
     def getid(self):
@@ -105,6 +110,7 @@ class Tacocat(Cards):
 class Favor(Cards):
     """
     Favor card class.
+    TODO: To be implemented
     """
 
     def getid(self):
@@ -125,6 +131,14 @@ class Skip(Cards):
     def __repr__(self):
         return "Skip"
 
+    def action(self, game):
+        """
+        The Skip card end the players current turn and
+        reduces the amount of cards required to be drawn
+        for the player by 1.
+        """
+        game.cards_to_draw -= 1
+
 
 class Attack(Cards):
     """
@@ -137,6 +151,18 @@ class Attack(Cards):
     def __repr__(self):
         return "Attack"
 
+    def action(self, game):
+        """
+        The attack card ends all remaining turns of the player and
+        makes the next player play twice. In the event when a player
+        plays an attack and have more than one turns remaining then
+        it adds two more turns to the next player.
+        """
+        if game.cards_to_draw == 1:
+            game.next_player_cards_to_draw = 2
+        else:
+            game.next_player_cards_to_draw = game.cards_to_draw + 2
+        game.cards_to_draw = 0
 
 class SeeTheFuture(Cards):
     """
@@ -149,10 +175,21 @@ class SeeTheFuture(Cards):
     def __repr__(self):
         return "See The Future"
 
+    def action(self, game):
+        """
+        This card allows the player to see the top 3 cards
+        of the drawing pile.
+        """
+        ### TODO: depending on strategy the below print function
+        # should have different functionality.
+        # e.g. when another player in the games plays this,
+        # you should not be able to see what the top 3 cards are.
+        print(game.deck.cards[0:3])
 
 class Nope(Cards):
     """
     Nope card class.
+    TODO: To be implemented
     """
 
     def getid(self):
@@ -172,3 +209,6 @@ class Shuffle(Cards):
 
     def __repr__(self):
         return "Shuffle"
+
+    def action(self, game):
+        game.deck.shuffle_deck()
