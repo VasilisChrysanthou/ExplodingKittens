@@ -14,6 +14,7 @@ class Player:
         self.name = name
         self.id = None
         self.hand = None
+        self.active = True
 
     def deal_hand(self, hand):
         """

@@ -15,7 +15,6 @@ class Game:
     def __init__(self, players=("Player 1", "Player 2")):
         self.deck = Deck(num_of_players=len(players))
         self.discard_pile = []
-        self.dead_players = []
         self.players = []
         for pl in players:
             self.players.append(Player(pl))
@@ -72,10 +71,9 @@ class Game:
             if drawn_card.id == 0:
                 exploded = self.current_player.explode()
                 if exploded:
-                    self.dead_players.append(self.current_player)
-                    self.players.pop(self.current_player.id)
+                    self.current_player.active = False
                     self.update_discard_pile(drawn_card)
-                    input(f"Bye bye player {self.current_player}")
+                    print(f"Bye bye player {self.current_player}")
                     self.cards_to_draw = 1
 
             self.cards_to_draw -= 1
@@ -85,17 +83,19 @@ class Game:
         self.turn_count = 0
         self.cards_to_draw = 1
         while not end_of_game:
-            # TODO: Solve the problem where a player explodes and SOMETIMES
-            #       the next player's turn is skipped. This happens because
-            #       when modulo changes from 3 to 2 the outcome changes as well
             player_id = self.turn_count % len(self.players)
             self.current_player = self.players[player_id]
             self.current_player.id = player_id
 
-            self.execute_all_turns_for_a_player()
-            self.cards_to_draw = self.next_player_cards_to_draw
+            if self.current_player.active:
+                self.execute_all_turns_for_a_player()
+                self.cards_to_draw = self.next_player_cards_to_draw
 
-            if len(self.players) == 1:
+            remaining_players = [pl for pl in self.players if pl.active]
+            if len(remaining_players) == 1:
                 end_of_game = True
 
             self.turn_count += 1
+
+        self.winner = remaining_players[0]
+        print(f"The winner is {self.winner}! Hooray yay wohoohoho!!!")
