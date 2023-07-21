@@ -13,6 +13,7 @@ class Player:
     def __init__(self, name=None):
         self.name = name
         self.id = None
+        #TODO:would it be better to define as [] an empty list?
         self.hand = None
         self.active = True
 
